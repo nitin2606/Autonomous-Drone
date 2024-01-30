@@ -1,6 +1,6 @@
 # Autonomous Drone Project
 
-![Drone Image](drone_image.jpg)
+![Drone Image](Drone1.jpeg)
 
 ## Overview
 
