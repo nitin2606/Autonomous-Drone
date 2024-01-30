@@ -15,11 +15,11 @@ This project implements an autonomous drone using **Ardupilot**, **Dronekit (Pyt
 
 ## Hardware Setup
 
-- **Drone Frame:** *Specify the drone frame model*
-- **Flight Controller:** *Specify the flight controller model*
+- **Drone Frame:** *Custom Manufactured (3D Printed)*
+- **Flight Controller:** *Pixhawk 2.4.8 *
 - **Onboard Computer:** Jetson Nano
-- **Camera:** *Specify the camera model*
-- **Payload Mechanism:** *Specify the payload release mechanism*
+- **Camera:** *Usb Webcam 720p*
+- **Payload Mechanism:** *Servo Based Mechanism*
 
 ## Software Dependencies
 
@@ -29,9 +29,3 @@ This project implements an autonomous drone using **Ardupilot**, **Dronekit (Pyt
 - **YOLO model for target detection**
 - *Any other relevant software dependencies*
 
-## Getting Started
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/Autonomous-Drone.git
-   cd Autonomous-Drone
