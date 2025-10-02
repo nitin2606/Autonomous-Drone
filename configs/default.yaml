@@ -1,0 +1,48 @@
+mission:
+  connection_string: "127.0.0.1:14550"
+  baud: 921600
+  search_altitude_m: 10.0
+  gnd_speed_mps: 1.0
+  loiter_seconds: 2
+
+camera:
+  source: 2            # integer index or url
+  width: 640
+  height: 480
+  fps: 30
+
+detection:
+  backend: "color"     # "color" | "yolov8"
+  draw_viz: true
+  min_area: 300
+  aspect_ratio_min: 0.5
+  aspect_ratio_max: 1.6
+
+  color:
+    blue: { h_min: 90, s_min: 100, v_min: 20, h_max: 120, s_max: 255, v_max: 255 }
+    yellow: { h_min: 20, s_min: 100, v_min: 150, h_max: 40, s_max: 255, v_max: 255 }
+    black: { h_min: 0, s_min: 0, v_min: 0, h_max: 180, s_max: 255, v_max: 30 }
+    red1: { h_min: 0, s_min: 100, v_min: 20, h_max: 10, s_max: 255, v_max: 255 }
+    red2: { h_min: 160, s_min: 100, v_min: 20, h_max: 179, s_max: 255, v_max: 255 }
+
+  yolov8:
+    model_path: "yolov8n.pt"    
+    conf_threshold: 0.25
+    iou_threshold: 0.45
+    classes: []                  
+
+control:
+  center_box:
+    x_min: 285
+    x_max: 365
+    y_min: 190
+    y_max: 320
+  pid:
+    x: { kp: 0.003, ki: 0.000, kd: 0.001 }
+    y: { kp: 0.003, ki: 0.000, kd: 0.001 }
+  limits:
+    vx_max: 2.0
+    vy_max: 2.0
+    vz_max: 1.0
+  deadzone_px: 10
+
